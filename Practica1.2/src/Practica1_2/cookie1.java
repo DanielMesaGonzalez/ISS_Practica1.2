@@ -30,7 +30,7 @@ public class cookie1 extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession sesion = request.getSession(true);
+		HttpSession sesion = request.getSession(true);//Devuelve el objeto sesión si ya existe, O LO CREA NUEVO
 		response.setContentType("text/html");
 		PrintWriter html = response.getWriter();
 		html.print("<strong>");
@@ -45,7 +45,7 @@ public class cookie1 extends HttpServlet {
 		            html.print("Este es el primer acceso de la sesión <br>");
 		            
 		}
-		      date = new Date();
+		      date = new Date();   //este objeto devuelve la fecha 
 		      sesion.setAttribute("date", date);
 		      html.print("Fecha actual: " + date);
 		      html.print("</strong>");
