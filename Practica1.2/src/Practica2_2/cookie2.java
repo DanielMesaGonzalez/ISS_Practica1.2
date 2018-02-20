@@ -50,6 +50,8 @@ public class cookie2 extends HttpServlet {
 		out.println("</center></body></html>");
 		out.close();
 		
+		permanente.setMaxAge(0); //Eliminamos la cookie indicando el tiempo a cero
+		response.addCookie(permanente);
 		
 		doGet(request, response);
 	}
