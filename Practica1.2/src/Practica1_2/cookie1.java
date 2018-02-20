@@ -45,11 +45,12 @@ public class cookie1 extends HttpServlet {
 		            html.print("Este es el primer acceso de la sesión <br>");
 		            
 		}
-		      date = new Date();   //este objeto devuelve la fecha 
+		      date = new Date();   //Este objeto devuelve la fecha 
 		      sesion.setAttribute("date", date);
 		      html.print("Fecha actual: " + date);
 		      html.print("</strong>");
-		}
+		      sesion.setMaxInactiveInterval(3); // Tiempo máximo de inactividad por parte del cliente  
+	}
 	
 
 	/**
